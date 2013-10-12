@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    693871,      13581]
-NotebookOptionsPosition[    692857,      13549]
-NotebookOutlinePosition[    693344,      13568]
-CellTagsIndexPosition[    693301,      13565]
+NotebookDataLength[    696392,      13634]
+NotebookOptionsPosition[    695378,      13602]
+NotebookOutlinePosition[    695865,      13621]
+CellTagsIndexPosition[    695822,      13618]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -116,56 +116,106 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"(*", " ", 
+  RowBox[{"(*", 
    RowBox[{
-    RowBox[{"Description", ":", "\[IndentingNewLine]", 
+    RowBox[{
      RowBox[{
       RowBox[{
-      "This", " ", "code", " ", "computes", " ", "the", " ", "CryoSat"}], "-", 
-      RowBox[{"2", " ", "pulse"}], "-", 
-      RowBox[{"limited", " ", 
-       RowBox[{"(", "PL", ")"}]}]}]}], ",", " ", 
-    RowBox[{"SAR", " ", "and", " ", "SARin", " ", 
-     RowBox[{"echoes", ".", " ", "No"}], " ", "input", " ", "from", " ", 
-     "the", " ", "user", " ", "is", "\[IndentingNewLine]", 
-     RowBox[{"required", ".", " ", "Output"}], " ", "files", " ", "of", " ", 
-     "the", " ", "calculated", " ", "model", " ", "are", " ", "generated", 
-     " ", "and", " ", "written", " ", "by", " ", "this", " ", 
-     RowBox[{"script", ".", " ", "A"}], " ", "usage", " ", "example"}], ",", 
-    " ", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{" ", 
+           RowBox[{
+            RowBox[{"Description", ":", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{
+              "This", " ", "code", " ", "computes", " ", "the", " ", 
+               "CryoSat"}], "-", 
+              RowBox[{"2", " ", "pulse"}], "-", 
+              RowBox[{"limited", " ", 
+               RowBox[{"(", "PL", ")"}]}]}]}], ",", " ", 
+            RowBox[{"SAR", " ", "and", " ", "SARin", " ", 
+             RowBox[{"echoes", ".", " ", "No"}], " ", "input", " ", "from", 
+             " ", "the", " ", "user", " ", "is", "\[IndentingNewLine]", 
+             RowBox[{"required", ".", " ", "Output"}], " ", "files", " ", 
+             "of", " ", "the", " ", "calculated", " ", "model", " ", "are", 
+             " ", "generated", " ", "and", " ", "written", " ", "by", " ", 
+             "this", " ", 
+             RowBox[{"script", ".", " ", "A"}], " ", "usage", " ", 
+             "example"}], ",", " ", "\[IndentingNewLine]", 
+            RowBox[{
+            "which", " ", "plots", " ", "examples", " ", "of", " ", "the", 
+             " ", "model", " ", "output", " ", "waveforms"}], ",", " ", 
+            RowBox[{"is", " ", "provided", " ", 
+             RowBox[{
+             "below", ".", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+              "Please"}], " ", "do", " ", "familiarise", " ", "yourself", " ",
+              "with", " ", "the", " ", "code"}], ",", " ", 
+            RowBox[{
+            "as", " ", "certain", " ", "segments", " ", "of", " ", "this", 
+             " ", "code", " ", "should", " ", "be", " ", 
+             "\[IndentingNewLine]", "modified", " ", "depending", " ", "of", 
+             " ", "which", " ", "echo", " ", 
+             RowBox[{"(", 
+              RowBox[{"PL", ",", " ", 
+               RowBox[{"SAR", " ", "or", " ", "SARin"}]}], ")"}], " ", "you", 
+             " ", "would", " ", "like", " ", "to", " ", 
+             RowBox[{
+             "generate", ".", " ", "\[IndentingNewLine]", 
+              "\[IndentingNewLine]", "A"}], " ", "detailed", " ", 
+             "description", " ", "of", " ", "the", " ", "theory", " ", "on", 
+             " ", "which", " ", "this", " ", "code", " ", "is", " ", 
+             RowBox[{
+             "built", ":", " ", "\[IndentingNewLine]", 
+              "\"\<Precise Estimates of Ocean Surface Parameters from the \
+CryoSat-2 Synthetic Aperture, Interferometric\nAltimeter\>\""}]}], ",", " ", 
+            RowBox[{"Katharine", " ", 
+             RowBox[{"A", ".", " ", "Giles"}]}], ",", " ", 
+            RowBox[{"Duncan", " ", 
+             RowBox[{"J", ".", " ", "Wingham"}]}], ",", " ", 
+            RowBox[{"Natalia", " ", "Galin"}], ",", " ", 
+            RowBox[{"Robert", " ", "Cullen"}], ",", " ", 
+            RowBox[{"Walter", " ", 
+             RowBox[{
+             "H", ".", " ", "F", ".", " ", "Smith", ".", 
+              "\[IndentingNewLine]", "\[IndentingNewLine]", "This"}], " ", 
+             "code", " ", "consists", " ", "of", " ", "two", " ", 
+             RowBox[{"parts", ":", "\[IndentingNewLine]", "Part1"}]}]}], 
+           ")"}], " ", "Code", " ", "to", " ", "generate", " ", "and", " ", 
+          "write", " ", "to", " ", "disk", " ", "the", " ", "look"}], "-", 
+         RowBox[{"up", " ", "tables", " ", "for", " ", "PL"}]}], ",", " ", 
+        RowBox[{"SAR", " ", "and", " ", "SARin", " ", 
+         RowBox[{"echoes", ".", "\[IndentingNewLine]", "   ", "Part2"}]}]}], 
+       ")"}], " ", "Code", " ", "to", " ", "ingest", " ", "the", " ", 
+      "look"}], "-", 
+     RowBox[{
+     "up", " ", "tables", " ", "generated", " ", "in", " ", "Part1"}]}], ",", 
+    " ", 
     RowBox[{
-    "which", " ", "plots", " ", "examples", " ", "of", " ", "the", " ", 
-     "model", " ", "output", " ", "waveforms"}], ",", " ", 
-    RowBox[{"is", " ", "provided", " ", 
      RowBox[{
-     "below", ".", "\[IndentingNewLine]", "\[IndentingNewLine]", "Please"}], 
-     " ", "do", " ", "familiarise", " ", "yourself", " ", "with", " ", "the", 
-     " ", "code"}], ",", " ", 
+     "and", " ", "demonstrate", " ", "the", " ", "use", " ", "of", " ", 
+      "these", " ", "look"}], "-", 
+     RowBox[{"up", " ", "tables"}]}], ",", " ", 
     RowBox[{
-    "as", " ", "certain", " ", "segments", " ", "of", " ", "this", " ", 
-     "code", " ", "should", " ", "be", " ", "\[IndentingNewLine]", "modified",
-      " ", "depending", " ", "of", " ", "which", " ", "echo", " ", 
-     RowBox[{"(", 
-      RowBox[{"PL", ",", " ", 
-       RowBox[{"SAR", " ", "or", " ", "SARin"}]}], ")"}], " ", "you", " ", 
-     "would", " ", "like", " ", "to", " ", 
+    "providing", " ", "example", " ", "plots", " ", "of", " ", "SAR", " ", 
+     "and", " ", "PL", " ", 
      RowBox[{
-     "generate", ".", " ", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-      "A"}], " ", "detailed", " ", "description", " ", "of", " ", "the", " ", 
-     "theory", " ", "on", " ", "which", " ", "this", " ", "code", " ", "is", 
-     " ", 
+     "echoes", ".", " ", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      "This"}], " ", "code"}], ",", " ", 
+    RowBox[{"the", " ", "companion", " ", "paper"}], ",", " ", 
+    RowBox[{
      RowBox[{
-     "built", ":", " ", "\[IndentingNewLine]", 
-      "\"\<Precise Estimates of Ocean Surface Parameters from the CryoSat-2 \
-Synthetic Aperture, Interferometric\nAltimeter\>\""}]}], ",", " ", 
-    RowBox[{"Katharine", " ", 
-     RowBox[{"A", ".", " ", "Giles"}]}], ",", " ", 
-    RowBox[{"Duncan", " ", 
-     RowBox[{"J", ".", " ", "Wingham"}]}], ",", " ", 
-    RowBox[{"Natalia", " ", "Galin"}], ",", " ", 
-    RowBox[{"Robert", " ", "Cullen"}], ",", " ", 
-    RowBox[{"Walter", " ", 
-     RowBox[{"H", ".", " ", "F", ".", " ", "Smith", "."}]}]}], 
+      RowBox[{"and", " ", "look"}], "-", 
+      RowBox[{"up", " ", "tables", " ", 
+       RowBox[{"(", 
+        RowBox[{"for", " ", "SAR", " ", "and", " ", "PL", " ", "modes"}], 
+        ")"}], " ", "are", " ", "available", " ", "on", " ", "the", " ", 
+       "GitHub", " ", 
+       RowBox[{"repository", ":", "\[IndentingNewLine]", "https", ":"}]}]}], "//", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"github", ".", "com"}], "/", "ngalin"}], "/", 
+      "CryoSat2_NumericalEchoModel"}]}]}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", "*)"}], "\[IndentingNewLine]", 
   "\[IndentingNewLine]", "\[IndentingNewLine]", 
   RowBox[{"(*", 
@@ -397,44 +447,45 @@ Synthetic Aperture, Interferometric\nAltimeter\>\""}]}], ",", " ",
        RowBox[{"set", " ", "baseline"}], " ", "=", " ", "0"}], ";"}]}], 
     "*)"}], "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"baseline", "=", "0"}], ";"}], 
-   RowBox[{"(*", 
-    RowBox[{"1.1676", ";"}], "*)"}], "\[IndentingNewLine]", 
-   RowBox[{"(*", 
+    RowBox[{"baseline", "=", "0"}], ";", 
+    RowBox[{"(*", 
+     RowBox[{"1.1676", ";"}], "*)"}], "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{
+      "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", 
+       "**", "**", "**", "**", "**", "**"}], "*", "*", 
+      RowBox[{
+      "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", 
+       "**"}]}], "********)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    
+    RowBox[{"(*", " ", 
+     RowBox[{
+     "THIS", " ", "NEXT", " ", "SUBROUTINE", " ", "IS", " ", "THE", " ", 
+      "ANTENNA", " ", "GAIN", " ", "PATTERN"}], " ", "*)"}], 
+    "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{
-     "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**",
-       "**", "**", "**", "**", "**"}], "*", "*", 
-     RowBox[{
-     "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", "**", 
-      "**"}]}], "********)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", " ", 
-    RowBox[{
-    "THIS", " ", "NEXT", " ", "SUBROUTINE", " ", "IS", " ", "THE", " ", 
-     "ANTENNA", " ", "GAIN", " ", "PATTERN"}], " ", "*)"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"gainsqr", "[", 
-     RowBox[{"roe_", ",", "thetaw_"}], "]"}], ":=", 
-    RowBox[{"Exp", "[", 
-     RowBox[{
-      RowBox[{"-", "2"}], 
-      RowBox[{"(", " ", 
-       RowBox[{
+     RowBox[{"gainsqr", "[", 
+      RowBox[{"roe_", ",", "thetaw_"}], "]"}], ":=", 
+     RowBox[{"Exp", "[", 
+      RowBox[{
+       RowBox[{"-", "2"}], 
+       RowBox[{"(", " ", 
         RowBox[{
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{"roe", " ", 
-             RowBox[{"Cos", "[", "thetaw", "]"}]}], ")"}], "/", "gamma1"}], 
-          ")"}], "^", "2"}], "+", 
-        RowBox[{
-         RowBox[{"(", 
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{"roe", " ", 
-             RowBox[{"Sin", "[", "thetaw", "]"}]}], ")"}], "/", "gamma2"}], 
-          ")"}], "^", "2"}]}], ")"}]}], "]"}]}], "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"roe", " ", 
+              RowBox[{"Cos", "[", "thetaw", "]"}]}], ")"}], "/", "gamma1"}], 
+           ")"}], "^", "2"}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"roe", " ", 
+              RowBox[{"Sin", "[", "thetaw", "]"}]}], ")"}], "/", "gamma2"}], 
+           ")"}], "^", "2"}]}], ")"}]}], "]"}]}]}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]", 
    RowBox[{"(*", " ", 
     RowBox[{
@@ -6043,7 +6094,9 @@ Synthetic Aperture, Interferometric\nAltimeter\>\""}]}], ",", " ",
    3.590500976573674*^9, 3.590501040887536*^9}, {3.59050113089885*^9, 
    3.590501222309634*^9}, 3.5905012611600513`*^9, 3.590501292097145*^9, {
    3.590501322627693*^9, 3.590501330585494*^9}, {3.5906000252546377`*^9, 
-   3.5906000541859426`*^9}, {3.590601269965214*^9, 3.590601270254654*^9}}],
+   3.5906000541859426`*^9}, {3.590601269965214*^9, 3.590601270254654*^9}, {
+   3.590601731572424*^9, 3.5906019819618807`*^9}, {3.590602020997113*^9, 
+   3.590602021951126*^9}}],
 
 Cell[BoxData[
  RowBox[{"(*", " ", 
@@ -13569,19 +13622,19 @@ CellTagsIndex->{}
 Notebook[{
 Cell[557, 20, 69, 1, 28, "Input"],
 Cell[629, 23, 4601, 91, 403, "Input"],
-Cell[5233, 116, 257174, 5929, 12269, "Input"],
-Cell[262410, 6047, 2174, 40, 148, "Input"],
+Cell[5233, 116, 259695, 5982, 12405, "Input"],
+Cell[264931, 6100, 2174, 40, 148, "Input"],
 Cell[CellGroupData[{
-Cell[264609, 6091, 25656, 736, 1304, "Input"],
-Cell[290268, 6829, 241, 6, 28, "Output"],
-Cell[290512, 6837, 39013, 652, 262, "Output"],
-Cell[329528, 7491, 39132, 654, 262, "Output"],
-Cell[368663, 8147, 52219, 869, 262, "Output"],
-Cell[420885, 9018, 47582, 796, 262, "Output"],
-Cell[468470, 9816, 43914, 732, 252, "Output"],
-Cell[512387, 10550, 43894, 730, 252, "Output"],
-Cell[556284, 11282, 50209, 835, 252, "Output"],
-Cell[606496, 12119, 86345, 1427, 252, "Output"]
+Cell[267130, 6144, 25656, 736, 1304, "Input"],
+Cell[292789, 6882, 241, 6, 28, "Output"],
+Cell[293033, 6890, 39013, 652, 262, "Output"],
+Cell[332049, 7544, 39132, 654, 262, "Output"],
+Cell[371184, 8200, 52219, 869, 262, "Output"],
+Cell[423406, 9071, 47582, 796, 262, "Output"],
+Cell[470991, 9869, 43914, 732, 252, "Output"],
+Cell[514908, 10603, 43894, 730, 252, "Output"],
+Cell[558805, 11335, 50209, 835, 252, "Output"],
+Cell[609017, 12172, 86345, 1427, 252, "Output"]
 }, Open  ]]
 }
 ]
