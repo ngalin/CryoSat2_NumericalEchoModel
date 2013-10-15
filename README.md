@@ -1,6 +1,7 @@
 CryoSat2_NumericalEchoModel
 ===========================
-
+DON'T HAVE GIT, AND WANT TO SEE THE PAPER? CLICK ON THE RIGHT HAND SIDE
+BUTTONS: "CLONE IN DESKTOP" AND/OR "DOWNLOAD ZIP"
 ********************************************************************************************************
 Copyright (c) 2013, Duncan J. Wingham,
 Center for Polar Observation and Modelling,
